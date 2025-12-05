@@ -7,59 +7,157 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            color: #222;
-            line-height: 1.6;
+            background: #f4f4f4;
+            padding: 40px;
+            margin: 0;
+            color: #333;
         }
-        h1 {
-            color: #0D3B2A;
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
         }
-        a {
-            color: #15C57E;
-            font-weight: bold;
-            text-decoration: none;
+        h1, h2 {
+            color: #111;
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-switch button {
+            padding: 6px 12px;
+            background: #fff;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
         }
     </style>
 </head>
 <body>
 
-<h1>À propos – Muslim App</h1>
-<p><strong>Dernière mise à jour :</strong> 2025-12-05</p>
+<div class="container">
 
-<p>
-    <strong>Muslim App</strong> est une application moderne et élégante conçue pour accompagner les musulmans dans leur pratique quotidienne :
-    lecture du Coran, gestion des prières, Qibla, rappels spirituels et outils d'apprentissage.
-</p>
+    <div class="lang-switch">
+        <button onclick="switchLang('fr')">🇫🇷 Français</button>
+        <button onclick="switchLang('en')">🇬🇧 English</button>
+    </div>
 
-<p>
-    L'application est développée par <strong>EL MARINI NETWORK</strong>, un studio indépendant dont la mission est de créer des expériences
-    mobiles de haute qualité, respectueuses, intuitives et entièrement axées sur le bien-être spirituel.
-</p>
+    <!-- ---------------------- FRENCH VERSION ---------------------- -->
+    <div id="fr" class="section active">
 
-<h2>Notre engagement</h2>
-<ul>
-    <li>Fournir une application simple, rapide et agréable à utiliser</li>
-    <li>Proposer un design premium, moderne et adapté à tous</li>
-    <li>Respecter totalement la vie privée de nos utilisateurs</li>
-    <li>Ne collecter aucune donnée personnelle</li>
-</ul>
+        <h1>À propos de Muslim App</h1>
+        <p><strong>Développeur :</strong> EL MARINI APP — Muslim App Developer</p>
+        <p><strong>Dernière mise à jour :</strong> 2025</p>
 
-<h2>Confidentialité</h2>
-<p>
-    Muslim App ne stocke aucune information en dehors de votre appareil.
-    Toutes les données (progression, favoris, préférences) restent locales et privées.
-</p>
+        <h2>Notre Vision</h2>
+        <p>
+            Muslim App a été créée pour offrir une expérience moderne, intuitive
+            et totalement respectueuse de la vie privée aux musulmans du monde entier.
+        </p>
 
-<h2>Contact</h2>
-<p>
-    Pour toute question, suggestion ou collaboration :
-    <br>
-    <strong>Email :</strong> <a href="mailto:support@elmariniapp.com">support@elmariniapp.com</a>
-</p>
+        <h2>Notre Mission</h2>
+        <p>
+            Fournir un outil fiable et élégant pour :
+        </p>
+        <ul>
+            <li>Lire le Coran facilement</li>
+            <li>Suivre les horaires de prière</li>
+            <li>Accéder à la Qibla</li>
+            <li>Développer sa spiritualité au quotidien</li>
+        </ul>
 
-<p>Que Allah vous facilite et vous accorde Sa miséricorde 🤲</p>
+        <h2>Respect de la Vie Privée</h2>
+        <p>
+            Muslim App ne collecte aucune donnée personnelle. Toutes les informations
+            restent sur l'appareil de l'utilisateur. Aucun tracking, aucune publicité.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+            Pour toute question :<br>
+            Email : <a href="mailto:support@elmariniapp.com">support@elmariniapp.com</a>
+        </p>
+
+        <h2>Pages Officielles</h2>
+        <ul>
+            <li><a href="https://elmariniapp.github.io/muslim-app-policy/">Politique de Confidentialité</a></li>
+            <li><a href="https://elmariniapp.github.io/muslim-app-support/">Support</a></li>
+            <li><a href="https://elmariniapp.github.io/muslim-app-developer/">Site Développeur</a></li>
+        </ul>
+    </div>
+
+
+    <!-- ---------------------- ENGLISH VERSION ---------------------- -->
+    <div id="en" class="section">
+
+        <h1>About Muslim App</h1>
+        <p><strong>Developer:</strong> EL MARINI APP — Muslim App Developer</p>
+        <p><strong>Last updated:</strong> 2025</p>
+
+        <h2>Our Vision</h2>
+        <p>
+            Muslim App was created to offer a modern, intuitive, and privacy-friendly
+            experience to Muslims around the world.
+        </p>
+
+        <h2>Our Mission</h2>
+        <p>Providing a reliable and elegant tool to:</p>
+        <ul>
+            <li>Read the Quran with ease</li>
+            <li>Follow accurate prayer times</li>
+            <li>Find the Qibla</li>
+            <li>Improve daily spirituality</li>
+        </ul>
+
+        <h2>Privacy Commitment</h2>
+        <p>
+            Muslim App does not collect personal data. All information stays on
+            the user's device. No tracking. No ads.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+            For any questions:<br>
+            Email: <a href="mailto:support@elmariniapp.com">support@elmariniapp.com</a>
+        </p>
+
+        <h2>Official Pages</h2>
+        <ul>
+            <li><a href="https://elmariniapp.github.io/muslim-app-policy/">Privacy Policy</a></li>
+            <li><a href="https://elmariniapp.github.io/muslim-app-support/">Support</a></li>
+            <li><a href="https://elmariniapp.github.io/muslim-app-developer/">Developer Website</a></li>
+        </ul>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2025 EL MARINI APP — Muslim App Developer
+</footer>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+}
+</script>
 
 </body>
 </html>
