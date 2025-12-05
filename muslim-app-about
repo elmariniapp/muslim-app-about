@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos – Muslim App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #222;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #0D3B2A;
+        }
+        a {
+            color: #15C57E;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>À propos – Muslim App</h1>
+<p><strong>Dernière mise à jour :</strong> 2025-12-05</p>
+
+<p>
+    <strong>Muslim App</strong> est une application moderne et élégante conçue pour accompagner les musulmans dans leur pratique quotidienne :
+    lecture du Coran, gestion des prières, Qibla, rappels spirituels et outils d'apprentissage.
+</p>
+
+<p>
+    L'application est développée par <strong>EL MARINI NETWORK</strong>, un studio indépendant dont la mission est de créer des expériences
+    mobiles de haute qualité, respectueuses, intuitives et entièrement axées sur le bien-être spirituel.
+</p>
+
+<h2>Notre engagement</h2>
+<ul>
+    <li>Fournir une application simple, rapide et agréable à utiliser</li>
+    <li>Proposer un design premium, moderne et adapté à tous</li>
+    <li>Respecter totalement la vie privée de nos utilisateurs</li>
+    <li>Ne collecter aucune donnée personnelle</li>
+</ul>
+
+<h2>Confidentialité</h2>
+<p>
+    Muslim App ne stocke aucune information en dehors de votre appareil.
+    Toutes les données (progression, favoris, préférences) restent locales et privées.
+</p>
+
+<h2>Contact</h2>
+<p>
+    Pour toute question, suggestion ou collaboration :
+    <br>
+    <strong>Email :</strong> <a href="mailto:support@elmariniapp.com">support@elmariniapp.com</a>
+</p>
+
+<p>Que Allah vous facilite et vous accorde Sa miséricorde 🤲</p>
+
+</body>
+</html>
