@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muslim App – Application musulmane moderne et sans publicité</title>
+    <title>Muslim App – Application musulmane moderne et utile</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #f4f4f4;
             padding: 40px;
             margin: 0;
             color: #333;
+            line-height: 1.6;
         }
         .container {
             max-width: 900px;
@@ -18,22 +19,29 @@
             background: #fff;
             padding: 40px;
             border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             border: 1px solid #ddd;
         }
         h1, h2 {
             color: #111;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
         }
         .lang-switch {
             text-align: right;
             margin-bottom: 20px;
         }
         .lang-switch button {
-            padding: 6px 12px;
+            padding: 8px 16px;
             background: #fff;
-            border: 1px solid #aaa;
+            border: 1px solid #ccc;
             border-radius: 6px;
             cursor: pointer;
             margin-left: 10px;
+            transition: background 0.3s;
+        }
+        .lang-switch button:hover {
+            background: #f0f0f0;
         }
         .section {
             display: none;
@@ -47,6 +55,19 @@
             font-size: 14px;
             color: #777;
         }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 <body>
@@ -58,7 +79,6 @@
         <button onclick="switchLang('en')">🇬🇧 English</button>
     </div>
 
-    <!-- ---------------------- VERSION FRANÇAISE ---------------------- -->
     <div id="fr" class="section active">
 
         <h1>À propos de Muslim App</h1>
@@ -66,7 +86,7 @@
         <p><strong>Dernière mise à jour :</strong> 2025</p>
 
         <p>
-            <em>Muslim App réunit tout ce dont le musulman a besoin au quotidien, dans une interface élégante, simple et sans publicité.</em>
+            <em>Muslim App réunit tout ce dont le musulman a besoin au quotidien, dans une interface élégante, simple et complète.</em>
         </p>
 
         <h2>Vision</h2>
@@ -76,7 +96,7 @@
 
         <h2>Mission</h2>
         <p>
-            Fournir un outil complet et fiable pour :
+            Fournir un outil <strong>utile</strong> et fiable pour :
         </p>
         <ul>
             <li>Lire et écouter le Coran facilement</li>
@@ -88,7 +108,7 @@
         <h2>Protection des données</h2>
         <p>
             Muslim App ne collecte ni ne partage aucune donnée personnelle. Toutes les informations restent stockées
-            sur l’appareil de l’utilisateur. Aucune publicité, aucun suivi, aucune transmission vers des serveurs externes.
+            sur l’appareil de l’utilisateur. Nous privilégions une expérience fluide sans aucun suivi intrusif.
             Les fonctionnalités comme la Qibla ou les horaires de prière utilisent uniquement des sources locales ou publiques fiables.
         </p>
 
@@ -107,7 +127,6 @@
     </div>
 
 
-    <!-- ---------------------- ENGLISH VERSION ---------------------- -->
     <div id="en" class="section">
 
         <h1>About Muslim App</h1>
@@ -115,7 +134,7 @@
         <p><strong>Last update:</strong> 2025</p>
 
         <p>
-            <em>Muslim App gathers all essential tools a Muslim needs daily, in a modern, elegant, and ad-free interface.</em>
+            <em>Muslim App gathers all essential tools a Muslim needs daily, in a modern, elegant, and complete interface.</em>
         </p>
 
         <h2>Vision</h2>
@@ -125,7 +144,7 @@
 
         <h2>Mission</h2>
         <p>
-            Offer a reliable and complete tool to:
+            Offer a <strong>useful</strong> and reliable tool to:
         </p>
         <ul>
             <li>Read and listen to the Quran easily</li>
@@ -137,7 +156,7 @@
         <h2>Data protection</h2>
         <p>
             Muslim App does not collect or share any personal information. All data stays on the user’s device.
-            No tracking, no ads, no external servers. All features (like Qibla or prayer times) rely solely on local or public sources.
+            We focus on a smooth user experience without any intrusive tracking. All features rely solely on local or public sources.
         </p>
 
         <h2>Contact</h2>
@@ -163,7 +182,9 @@
 
 <script>
 function switchLang(lang) {
+    // Masquer toutes les sections
     document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    // Afficher la section sélectionnée
     document.getElementById(lang).classList.add('active');
 }
 </script>
