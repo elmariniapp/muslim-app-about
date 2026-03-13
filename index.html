@@ -3,70 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muslim App – Application musulmane moderne et utile</title>
+    <title>Muslim App – Application musulmane moderne, fiable et utile</title>
+    <meta name="description" content="Muslim App est une application musulmane moderne conçue pour accompagner les utilisateurs dans leur pratique quotidienne avec des outils utiles, une interface soignée et une approche respectueuse de la vie privée.">
     <style>
+        :root {
+            --bg: #f5f7fa;
+            --card: #ffffff;
+            --text: #1a1f2b;
+            --muted: #5f6b7a;
+            --line: #e6e9ee;
+            --primary: #0f766e;
+            --primary-soft: #e6f4f1;
+            --shadow: 0 10px 30px rgba(0,0,0,0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f4f4;
-            padding: 40px;
+            background: linear-gradient(180deg, #f8fafc 0%, #f3f4f6 100%);
             margin: 0;
-            color: #333;
-            line-height: 1.6;
+            padding: 32px 16px;
+            color: var(--text);
+            line-height: 1.7;
         }
+
         .container {
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border: 1px solid #ddd;
+            max-width: 980px;
+            margin: 0 auto;
+            background: var(--card);
+            padding: 40px 32px;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--line);
         }
-        h1, h2 {
-            color: #111;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
         }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .brand-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text);
+            margin: 0;
+        }
+
+        .brand-subtitle {
+            color: var(--muted);
+            font-size: 15px;
+            margin: 0;
+        }
+
         .lang-switch {
-            text-align: right;
-            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
         }
+
         .lang-switch button {
-            padding: 8px 16px;
+            padding: 10px 16px;
             background: #fff;
-            border: 1px solid #ccc;
-            border-radius: 6px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
             cursor: pointer;
-            margin-left: 10px;
-            transition: background 0.3s;
+            transition: all 0.2s ease;
+            font-weight: 600;
         }
+
         .lang-switch button:hover {
-            background: #f0f0f0;
+            background: #f8fafc;
+            border-color: #d8dee8;
         }
+
+        .hero {
+            background: linear-gradient(135deg, #f8fffe 0%, #eef8f6 100%);
+            border: 1px solid #dcefeb;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            margin: 0 0 12px 0;
+            font-size: 32px;
+            line-height: 1.2;
+            color: #0f172a;
+        }
+
+        .hero p {
+            margin: 0;
+            color: #334155;
+            font-size: 17px;
+        }
+
         .section {
             display: none;
         }
+
         .section.active {
             display: block;
         }
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            font-size: 14px;
-            color: #777;
+
+        h2 {
+            margin-top: 34px;
+            margin-bottom: 12px;
+            color: #111827;
+            font-size: 22px;
+            border-bottom: 2px solid #eef2f7;
+            padding-bottom: 10px;
         }
+
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #0f172a;
+        }
+
+        p {
+            margin: 0 0 14px 0;
+        }
+
+        .lead {
+            font-size: 17px;
+            color: #334155;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 14px;
+            margin: 18px 0 8px;
+        }
+
+        .info-card {
+            background: #fcfcfd;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 16px;
+        }
+
+        .info-card strong {
+            display: block;
+            margin-bottom: 6px;
+            color: #0f172a;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary);
+            border: 1px solid #cde9e3;
+            border-radius: 999px;
+            padding: 6px 12px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        ul {
+            padding-left: 22px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
         a {
-            color: #007bff;
+            color: #0b65c2;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
-        ul {
-            padding-left: 20px;
+
+        .highlight {
+            background: #fafaf8;
+            border-left: 4px solid var(--primary);
+            padding: 16px 18px;
+            border-radius: 10px;
+            margin: 18px 0;
+            color: #334155;
         }
-        li {
-            margin-bottom: 8px;
+
+        .divider {
+            height: 1px;
+            background: var(--line);
+            margin: 32px 0;
+        }
+
+        footer {
+            max-width: 980px;
+            margin: 18px auto 0;
+            text-align: center;
+            font-size: 14px;
+            color: #6b7280;
+            padding-bottom: 12px;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px 18px;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .brand-title {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
@@ -74,48 +236,136 @@
 
 <div class="container">
 
-    <div class="lang-switch">
-        <button onclick="switchLang('fr')">🇫🇷 Français</button>
-        <button onclick="switchLang('en')">🇬🇧 English</button>
+    <div class="topbar">
+        <div class="brand">
+            <p class="brand-title">Muslim App</p>
+            <p class="brand-subtitle">Application musulmane moderne • Useful, reliable, privacy-respecting</p>
+        </div>
+
+        <div class="lang-switch">
+            <button onclick="switchLang('fr')">🇫🇷 Français</button>
+            <button onclick="switchLang('en')">🇬🇧 English</button>
+        </div>
     </div>
 
     <div id="fr" class="section active">
+        <div class="hero">
+            <div class="badge">Présentation officielle</div>
+            <h1>À propos de Muslim App</h1>
+            <p>
+                Muslim App est une application musulmane moderne conçue pour proposer une expérience utile,
+                claire et soignée au quotidien. Notre objectif est de réunir dans une même application des outils
+                essentiels, pratiques et respectueux de l’utilisateur, avec une attention particulière portée à
+                la simplicité, à la fiabilité et à la confidentialité.
+            </p>
+        </div>
 
-        <h1>À propos de Muslim App</h1>
-        <p><strong>Développeur :</strong> EL MARINI APP — Muslim App Developer</p>
-        <p><strong>Dernière mise à jour :</strong> 2025</p>
+        <div class="info-grid">
+            <div class="info-card">
+                <strong>Développeur</strong>
+                EL MARINI APP
+            </div>
+            <div class="info-card">
+                <strong>Positionnement</strong>
+                Application musulmane moderne, utile et centrée sur l’expérience utilisateur
+            </div>
+            <div class="info-card">
+                <strong>Dernière mise à jour</strong>
+                2025
+            </div>
+            <div class="info-card">
+                <strong>Contact principal</strong>
+                support@elmariniapp.com
+            </div>
+        </div>
 
+        <h2>Notre vision</h2>
+        <p class="lead">
+            Proposer une application musulmane contemporaine, sérieuse et accessible, capable d’accompagner
+            les utilisateurs dans leur quotidien avec des outils pertinents, une interface propre et une
+            approche respectueuse des besoins réels.
+        </p>
         <p>
-            <em>Muslim App réunit tout ce dont le musulman a besoin au quotidien, dans une interface élégante, simple et complète.</em>
+            Nous croyons qu’une application spirituelle doit être à la fois belle, simple à utiliser, fiable
+            dans son fonctionnement et discrète dans son rapport aux données personnelles.
         </p>
 
-        <h2>Vision</h2>
+        <h2>Notre mission</h2>
         <p>
-            Offrir une expérience moderne, fluide et respectueuse de la vie privée à chaque musulman, partout dans le monde.
-        </p>
-
-        <h2>Mission</h2>
-        <p>
-            Fournir un outil <strong>utile</strong> et fiable pour :
+            La mission de Muslim App est de fournir une base numérique utile pour le quotidien du musulman,
+            sans complexité inutile, sans surcharge visuelle et sans pratiques intrusives.
         </p>
         <ul>
-            <li>Lire et écouter le Coran facilement</li>
-            <li>Suivre les horaires de prière avec précision</li>
-            <li>Identifier la direction de la Qibla</li>
-            <li>Renforcer sa spiritualité au quotidien</li>
+            <li>Faciliter l’accès aux outils religieux et pratiques du quotidien</li>
+            <li>Offrir une expérience claire, moderne et intuitive</li>
+            <li>Mettre l’accent sur la stabilité, la lisibilité et la simplicité d’usage</li>
+            <li>Respecter la vie privée de l’utilisateur à chaque étape</li>
+            <li>Construire un produit utile sur le long terme, avec une démarche sérieuse et cohérente</li>
         </ul>
 
-        <h2>Protection des données</h2>
+        <h2>Ce que propose Muslim App</h2>
         <p>
-            Muslim App ne collecte ni ne partage aucune donnée personnelle. Toutes les informations restent stockées
-            sur l’appareil de l’utilisateur. Nous privilégions une expérience fluide sans aucun suivi intrusif.
-            Les fonctionnalités comme la Qibla ou les horaires de prière utilisent uniquement des sources locales ou publiques fiables.
+            L’application a vocation à réunir plusieurs outils utiles dans une seule expérience cohérente.
+            Selon la version et l’évolution du produit, Muslim App peut notamment proposer :
+        </p>
+        <ul>
+            <li>la consultation du Coran dans une interface de lecture soignée,</li>
+            <li>des outils liés aux horaires de prière,</li>
+            <li>une aide à l’orientation de la Qibla,</li>
+            <li>des fonctionnalités utiles pour accompagner la pratique quotidienne,</li>
+            <li>une expérience pensée pour rester simple, lisible et agréable à utiliser.</li>
+        </ul>
+
+        <div class="highlight">
+            Nous privilégions une approche qualitative : une application ne doit pas seulement “fonctionner”,
+            elle doit inspirer confiance, être agréable à utiliser et rester claire pour tous les profils
+            d’utilisateurs.
+        </div>
+
+        <h2>Principes de conception</h2>
+        <p>
+            Muslim App est développé avec une attention particulière portée à plusieurs principes clés :
+        </p>
+        <ul>
+            <li><strong>Utilité :</strong> chaque fonctionnalité doit répondre à un besoin réel.</li>
+            <li><strong>Simplicité :</strong> l’interface doit rester claire, lisible et directe.</li>
+            <li><strong>Fiabilité :</strong> nous cherchons à proposer une expérience stable et cohérente.</li>
+            <li><strong>Respect :</strong> l’utilisateur garde le contrôle de son expérience.</li>
+            <li><strong>Évolution continue :</strong> l’application a vocation à s’améliorer dans le temps.</li>
+        </ul>
+
+        <h2>Confidentialité et protection des données</h2>
+        <p>
+            La confidentialité est un principe central de Muslim App. Nous favorisons une architecture simple
+            et respectueuse, en évitant toute collecte excessive ou inutile.
+        </p>
+        <ul>
+            <li>Nous ne cherchons pas à exploiter les données personnelles des utilisateurs.</li>
+            <li>Les informations utiles au fonctionnement de l’application restent, autant que possible, sur l’appareil.</li>
+            <li>Nous privilégions une expérience sans suivi intrusif.</li>
+            <li>Les fonctionnalités reposent sur des traitements locaux ou sur des sources publiques/techniques nécessaires au service rendu.</li>
+        </ul>
+        <p>
+            Lorsqu’une fonctionnalité nécessite un accès spécifique (par exemple à la localisation pour certains usages),
+            celui-ci est utilisé dans le seul but d’assurer le bon fonctionnement de l’outil concerné.
         </p>
 
-        <h2>Contact</h2>
+        <h2>Engagement qualité</h2>
         <p>
-            Pour toute question ou suggestion :<br>
-            Email : <a href="mailto:support@elmariniapp.com">support@elmariniapp.com</a>
+            Nous accordons une importance particulière à la qualité perçue du produit : lisibilité de l’interface,
+            cohérence visuelle, stabilité générale, clarté des parcours et amélioration continue.
+        </p>
+        <p>
+            Muslim App s’inscrit dans une démarche de développement sérieuse, avec la volonté de construire
+            une application durable, utile et crédible.
+        </p>
+
+        <h2>Support et contact</h2>
+        <p>
+            Pour toute question, suggestion, retour d’expérience ou demande liée à l’application, vous pouvez nous contacter à l’adresse suivante :
+        </p>
+        <p>
+            <strong>Email :</strong> <a href="mailto:support@elmariniapp.com">support@elmariniapp.com</a>
         </p>
 
         <h2>Pages officielles</h2>
@@ -124,45 +374,130 @@
             <li><a href="https://elmariniapp.github.io/muslim-app-support/">Support</a></li>
             <li><a href="https://elmariniapp.github.io/muslim-app-developer/">Site du développeur</a></li>
         </ul>
+
+        <div class="divider"></div>
+
+        <p>
+            <strong>Muslim App</strong> a été pensé comme un environnement numérique utile, propre et respectueux,
+            au service d’un usage quotidien simple et serein.
+        </p>
     </div>
 
-
     <div id="en" class="section">
+        <div class="hero">
+            <div class="badge">Official presentation</div>
+            <h1>About Muslim App</h1>
+            <p>
+                Muslim App is a modern Muslim application designed to provide a useful, clear, and polished
+                daily experience. Our goal is to bring together essential tools in one place while maintaining
+                a strong focus on simplicity, reliability, product quality, and user privacy.
+            </p>
+        </div>
 
-        <h1>About Muslim App</h1>
-        <p><strong>Developer:</strong> EL MARINI APP — Muslim App Developer</p>
-        <p><strong>Last update:</strong> 2025</p>
+        <div class="info-grid">
+            <div class="info-card">
+                <strong>Developer</strong>
+                EL MARINI APP
+            </div>
+            <div class="info-card">
+                <strong>Positioning</strong>
+                A modern, useful, and user-focused Muslim application
+            </div>
+            <div class="info-card">
+                <strong>Last update</strong>
+                2025
+            </div>
+            <div class="info-card">
+                <strong>Main contact</strong>
+                support@elmariniapp.com
+            </div>
+        </div>
 
+        <h2>Our vision</h2>
+        <p class="lead">
+            To offer a serious, accessible, and contemporary Muslim app that supports users in their daily life
+            through relevant tools, a clean interface, and a respectful product philosophy.
+        </p>
         <p>
-            <em>Muslim App gathers all essential tools a Muslim needs daily, in a modern, elegant, and complete interface.</em>
+            We believe a spiritual app should be both elegant and practical, reliable in everyday use,
+            and discreet in the way it handles personal data.
         </p>
 
-        <h2>Vision</h2>
+        <h2>Our mission</h2>
         <p>
-            To provide every Muslim with a modern, intuitive, and privacy‑friendly experience wherever they are.
-        </p>
-
-        <h2>Mission</h2>
-        <p>
-            Offer a <strong>useful</strong> and reliable tool to:
+            Muslim App aims to provide a useful digital foundation for everyday Muslim life, without unnecessary
+            complexity, without visual overload, and without intrusive practices.
         </p>
         <ul>
-            <li>Read and listen to the Quran easily</li>
-            <li>Follow precise prayer times</li>
-            <li>Find the Qibla direction</li>
-            <li>Enhance daily spirituality</li>
+            <li>Make essential religious and practical tools easier to access</li>
+            <li>Provide a clean, modern, and intuitive user experience</li>
+            <li>Focus on stability, readability, and ease of use</li>
+            <li>Respect user privacy at every stage</li>
+            <li>Build a product that remains useful, serious, and consistent over time</li>
         </ul>
 
-        <h2>Data protection</h2>
+        <h2>What Muslim App offers</h2>
         <p>
-            Muslim App does not collect or share any personal information. All data stays on the user’s device.
-            We focus on a smooth user experience without any intrusive tracking. All features rely solely on local or public sources.
+            The application is designed to bring together several useful tools within one coherent experience.
+            Depending on the version and product evolution, Muslim App may include:
+        </p>
+        <ul>
+            <li>Quran access through a clean and comfortable reading experience,</li>
+            <li>tools related to prayer times,</li>
+            <li>Qibla direction assistance,</li>
+            <li>helpful features supporting daily spiritual practice,</li>
+            <li>an interface built to stay simple, readable, and pleasant to use.</li>
+        </ul>
+
+        <div class="highlight">
+            We prioritize quality over noise: an application should not only work, it should feel trustworthy,
+            comfortable to use, and immediately understandable for a wide range of users.
+        </div>
+
+        <h2>Design principles</h2>
+        <p>
+            Muslim App is developed with particular attention to a few core principles:
+        </p>
+        <ul>
+            <li><strong>Usefulness:</strong> every feature should answer a real need.</li>
+            <li><strong>Simplicity:</strong> the interface should remain clear, readable, and direct.</li>
+            <li><strong>Reliability:</strong> we aim for a stable and coherent experience.</li>
+            <li><strong>Respect:</strong> the user stays in control of the experience.</li>
+            <li><strong>Continuous improvement:</strong> the product is meant to evolve thoughtfully over time.</li>
+        </ul>
+
+        <h2>Privacy and data protection</h2>
+        <p>
+            Privacy is one of the core principles behind Muslim App. We favor a simple and respectful approach,
+            avoiding excessive or unnecessary data collection.
+        </p>
+        <ul>
+            <li>We do not aim to exploit users’ personal data.</li>
+            <li>Information required for app functionality remains, whenever possible, on the user’s device.</li>
+            <li>We prioritize an experience free from intrusive tracking.</li>
+            <li>Features rely on local processing or on public/technical sources strictly necessary to provide the service.</li>
+        </ul>
+        <p>
+            Whenever a feature requires specific access, such as location for certain use cases, that access is used
+            only to support the correct functioning of the related feature.
         </p>
 
-        <h2>Contact</h2>
+        <h2>Quality commitment</h2>
         <p>
-            For any questions or suggestions:<br>
-            Email: <a href="mailto:support@elmariniapp.com">support@elmariniapp.com</a>
+            We place strong emphasis on perceived product quality: interface readability, visual consistency,
+            overall stability, clarity of flows, and continuous refinement.
+        </p>
+        <p>
+            Muslim App is built with a serious long-term mindset, with the intention of offering a durable,
+            credible, and genuinely useful application.
+        </p>
+
+        <h2>Support and contact</h2>
+        <p>
+            For any question, suggestion, feedback, or request related to the application, you can contact us at:
+        </p>
+        <p>
+            <strong>Email:</strong> <a href="mailto:support@elmariniapp.com">support@elmariniapp.com</a>
         </p>
 
         <h2>Official pages</h2>
@@ -172,20 +507,27 @@
             <li><a href="https://elmariniapp.github.io/muslim-app-developer/">Developer Website</a></li>
         </ul>
 
+        <div class="divider"></div>
+
+        <p>
+            <strong>Muslim App</strong> is designed as a useful, polished, and respectful digital environment,
+            built to support a calm and practical daily experience.
+        </p>
     </div>
 
 </div>
 
 <footer>
-    © 2025 EL MARINI APP — Applications mobiles islamiques modernes
+    © 2025 EL MARINI APP — Modern Islamic mobile applications
 </footer>
 
 <script>
 function switchLang(lang) {
-    // Masquer toutes les sections
-    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-    // Afficher la section sélectionnée
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+    });
     document.getElementById(lang).classList.add('active');
+    document.documentElement.lang = lang;
 }
 </script>
 
